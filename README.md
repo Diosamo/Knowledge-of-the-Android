@@ -12,4 +12,5 @@ Android相关技术文章
 1. [提高Android项目开发效率](https://github.com/Diosamo/Android-improves-development-efficiency)
 2.  [Andorid自动化测试Monkey](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/Monkey%E6%B5%8B%E8%AF%95.md) 
 3.   [Android 三方云测试平台简介](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/%E4%B8%89%E6%96%B9%E4%BA%91%E6%B5%8B%E5%B9%B3%E5%8F%B0.md) 
+4.   [快速学会使用Git](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%BC%9A%E4%BD%BF%E7%94%A8Git.md) 
 
