@@ -30,13 +30,14 @@ REST（英文：Representational State Transfer，简称REST）描述了一个�
 ### 举个例子
 
 要让一个资源可以被识别，需要有个唯一标识，在Web中这个唯一标识就是URI(Uniform Resource Identifier)。 URI既可以看成是资源的地址，也可以看成是资源的名称。如果某些信息没有使用URI来表示，那它就不能算是一个资源， 只能算是资源的一些信息而已。URI的设计应该遵循可寻址性原则，具有自描述性，需要在形式上给人以直觉上的关联。这里以github网站为例，给出一些还算不错的URI：
-https://github.com/git
-https://github.com/git/git
-https://github.com/git/git/blob/master/block-sha1/sha1.h
-https://github.com/git/git/commit/e3af72cdafab5993d18fae056f87e1d675913d08
-https://github.com/git/git/pulls
-https://github.com/git/git/pulls?state=closed
-https://github.com/git/git/compare/master…next
+
+	https://github.com/git
+	https://github.com/git/git
+	https://github.com/git/git/blob/master/block-sha1/sha1.h
+	https://github.com/git/git/commit/e3af72cdafab5993d18fae056f87e1d675913d08
+	https://github.com/git/git/pulls
+	https://github.com/git/git/pulls?state=closed
+	https://github.com/git/git/compare/master…next
 
 * 使用_或-来让URI可读性更好
 * 使用/来表示资源的层级关系

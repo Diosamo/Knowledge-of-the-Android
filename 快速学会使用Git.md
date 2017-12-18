@@ -66,6 +66,8 @@ git config --global http.sslVerify false
 
 	用git log --graph命令可以看到分支合并图
 
+	git cherry-pick <commitid>  合并某一次提交记录的代码
+
 
 再合并分支的时候可能有的小伙伴会出现冲突的情况这个时候应该解决冲突然后 通过 git status 查看通途文件解决以后然后在添加提交就可以了  
 当工作没有完成时，又有其他事情出现,这个时候可以先把工作现场git stash一下，然后去其他事情，完成后，再git stash pop，回到工作现场.      
