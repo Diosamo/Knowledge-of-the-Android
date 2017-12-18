@@ -66,7 +66,9 @@ git config --global http.sslVerify false
 
 	用git log --graph命令可以看到分支合并图
 
-	git cherry-pick <commitid>  合并某一次提交记录的代码
+	git cherry-pick  <name>   也可以用来合并分支
+
+ 	git cherry-pick <commitid>  合并某一次提交记录的代码
 
 
 再合并分支的时候可能有的小伙伴会出现冲突的情况这个时候应该解决冲突然后 通过 git status 查看通途文件解决以后然后在添加提交就可以了  
