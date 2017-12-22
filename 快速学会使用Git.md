@@ -27,11 +27,21 @@ GIT的内容存储使用的是SHA-1哈希算法。这能确保代码内容的完
 
 ## 开始Git操作
 
+### 配置用户名和邮件  
+打开git bash 配置命令
+  
+ 	git config --global user.name "您的用户名"
+	
+	git config --global user.email "您的邮箱"
+
+
 ### Git创建版本库:
 	1. 找到一个放置项目的文件夹
 	2. 然后右键点击鼠标Git Bash Here 在命令行里面输入git init    
 版本库就创建好了
 如果你没有看到.git目录，那是因为这个目录默认是隐藏的，用ls -ah命令就可以看见。
+	
+	删除远程仓库: git  remote rm test
 
 ### 关联/克隆远程仓库
 Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。
@@ -49,6 +59,12 @@ git config --global http.sslVerify false
 	2. 关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
 
 	3.此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
+
+	4.查看修改内容(工作区和仓库的区别): git diff (file)
+	
+	5.查看版本(参数可以简化版本信息,commit id和备注):
+	git log --pretty=oneline
+
 
 ### 创建合并分支:
 
@@ -70,7 +86,9 @@ git config --global http.sslVerify false
 
  	git cherry-pick <commitid>  合并某一次提交记录的代码
 
-
+	建立本地分支和远程分支的关联,使用:
+	git branch --set-upstream branch-name  origin/branch-name;
+	
 再合并分支的时候可能有的小伙伴会出现冲突的情况这个时候应该解决冲突然后 通过 git status 查看通途文件解决以后然后在添加提交就可以了  
 当工作没有完成时，又有其他事情出现,这个时候可以先把工作现场git stash一下，然后去其他事情，完成后，再git stash pop，回到工作现场.      
 
@@ -119,6 +137,8 @@ Git设置标签很简单
 	
 		要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
 
+		
+
 
 2. 撤销修改删除
 
@@ -128,6 +148,7 @@ Git设置标签很简单
 
 		3.命令git rm用于删除一个文件。
 
+		
 
 
 
