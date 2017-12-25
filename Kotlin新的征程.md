@@ -1,6 +1,7 @@
 ## Kotlin新的征程（一）
 
-![](https://upload-images.jianshu.io/upload_images/9352581-95332e208344727a.png)
+![](https://upload-images.jianshu.io/upload_images/9352581-95332e208344727a.png)    
+
 自今年**Google**宣布将Kotlin作为Android首选开发语言（官方语言），我就知道Kotlin即将要崛起，为什么会崛起？因为Kotlin这门语言不仅可以针对Android移动开发，它还可以：
  * Web前端开发
  * Web后端开发
