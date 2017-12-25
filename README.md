@@ -26,4 +26,4 @@ Android相关技术文章
 
 ### Kotlin相关   
 
-8.[RESTful是什么](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/Kotlin新的征程.md) 
+8.[Kotlin新的征程（一）](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/Kotlin新的征程.md) 
