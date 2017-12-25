@@ -8,6 +8,10 @@
 
 ### Retrofit2是什么?
 
+Retrofit是由Square公司出品的针对于Android和Java的类型安全的Http客户端，吸取了RESTful的风格,实质上就是对okhttp 进行了封装,利用动态代理实现了网络接口底层请求,然后将返回的数据就行转换成我们指定的Bean对象,极大的提高了效率,和网络体验.
+
+[RESTful相关文档](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/RESTful%E6%98%AF%E4%BB%80%E4%B9%88.md)
+
 ### 使用依赖
 首先在**build.gradle**中添加如下代码，添加Retrofit2库
 
@@ -77,7 +81,8 @@ public interface API {
 
 刚刚已经完成了retrofit最基本的快速使用方法,那么接下来就详细介绍一下retrofit的注解,retrofit里面有很多注解,是一个很轻量级的库,
 一共37个类就有22个是注解类,所以大家这一块一定要仔细认真的看一下.  
-* **请求方法类**  
+
+*  **请求方法类**  
 
 @PATCH、@OPTIONS、@HTTP、@HEAD、@PUT、@GET、@PUT、@DELETE
 方法注解和RESTFUL API有关   
@@ -118,18 +123,115 @@ public interface API {
 
 @Url: 作用于方法参数,用于添加请求的接口地址
 
-[Retrofit官方文档](https://square.github.io/retrofit/)
+
+### Bean对象转换
+要自定义Converter<F, T>，需要先看一下GsonConverterFactory的实现，
+GsonConverterFactory实现了内部类Converter.Factory。
+
+其中GsonConverterFactory中的主要两个方法，主要用于解析request和response的，
+在Factory中还有一个方法stringConverter，用于String的转换。
+
+引入Gson支持:  
+
+	compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+通过GsonConverterFactory为Retrofit添加Gson支持：  
+
+```java  
+Gson gson = new GsonBuilder()
+      //配置你的Gson
+      .setDateFormat("yyyy-MM-dd hh:mm:ss")
+      .create();
+
+Retrofit retrofit = new Retrofit.Builder()
+      .baseUrl("http://localhost:4567/")
+      //可以接收自定义的Gson，当然也可以不传
+      .addConverterFactory(GsonConverterFactory.create(gson))
+      .build();   
+
+```
+
+然后通过  Call<ResponseBody> 这里替换ResponseBody 为自己的Bean对象Call<JavaBean> 然后请求回来的数据就会自动转换.
+
+### 结合okhttp,并使用Interceptor  
+对应依赖:
+
+		compile 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+
+		testImplementation 'com.squareup.okhttp3:mockwebserver:3.9.1'
+
+Retrofit 2.0 底层依赖于okHttp，所以需要使用okHttp的Interceptors 来对所有请求进行拦截。
+我们可以通过自定义Interceptor来实现很多操作,打印日志,缓存,重试等等。
+
+要实现自己的拦截器需要有以下步骤
+
+	//创建OkHttpClient
+OkHttpClient client = new OkHttpClient.Builder()
+                .addInterceptor(new HttpLoggingInterceptor())
+                .build();
+retrofit = new Retrofit.Builder()
+        .baseUrl(Urls.baseUrl)
+        .client(client)//添加自定义OkHttpClient
+        .build();
+
+### 如何结合RxJava
+
+引入RxJava支持:
+
+	//这里支持的是RxJava2
+	compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+	compile "io.reactivex.rxjava2:rxjava:2.1.7"
+
+如何添加:  
+```java
+retrofit = new Retrofit.Builder()
+        .baseUrl(Urls.baseUrl)
+ 		// 针对rxjava2.x  
+		.addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+        .build();
+```  
+
+在请求的接口中直接指定Observable 的Rxjava对象:  
+
+	public interface Api{
+	  @POST("/page")
+	  Observable<Event1> getBook();
+	}
+
+然后在通过以下代码完成一套行云流水的结合操作:  
+
+```java   
+ Retrofit retrofit= new Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .build();
+
+        API movieService = retrofit.create(API.class);
+
+        movieService.getTest()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<Event1>() {
+                    @Override
+                    public void onCompleted() {
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                    }
+
+                    @Override
+                    public void onNext(MovieEntity movieEntity) {
+                    }
+                });
+
+```   
+
+这样完成了Retrofit和Rxjava的结合,这只是最基本的操作,更多操作还需要大家多多练习,提升自己,方能想怎么玩就怎么玩!
+这是官方文档,想要深入研究的小伙伴可以好好学一波,加油!  
+
+[Retrofit官方文档](https://square.github.io/retrofit/)  
 
 
-
-
-
-
-
-
-
-
-
-
-
-(未完待续)
+ ![](http://upload-images.jianshu.io/upload_images/9352581-0099c4e4bca81c76.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+[如有更好的建议提议,可以发到我的邮箱diosamolee2014@gmail.com](#)
