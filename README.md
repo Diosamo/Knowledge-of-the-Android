@@ -22,7 +22,7 @@ Android相关技术文章
 5.   [Rxjava2快速入门](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/RxJava2%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.md) 
 6.   [Retrofit2快速入门](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/Retorfit2%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.md) 
 7.   [RESTful是什么](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/RESTful%E6%98%AF%E4%BB%80%E4%B9%88.md) 
-8.   [AndroidStudio 3.0快速环境安装使用](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/AndroidStudio 3.0快速环境安装使用.md) 
+8.   [AndroidStudio 3.0快速环境安装使用](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/AndroidStudio%203.0%E5%BF%AB%E9%80%9F%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.md) 
 
 
 ### Kotlin相关   
