@@ -27,5 +27,5 @@ Android相关技术文章
 
 ### Kotlin相关   
 
-1. [Kotlin新的征程（一）](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/Kotlin新的征程.md) 
-2.  [Kotlin的基本语法（二）](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/Kotlin的基本语法（二）.md)
+1. [Kotlin新的征程（一）](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/kotlin/Kotlin%E6%96%B0%E7%9A%84%E5%BE%81%E7%A8%8B(%E4%B8%80).md) 
+2.  [Kotlin 快速创建您的第一个应用（二）](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/kotlin/Kotlin%20%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E6%82%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8%EF%BC%88%E4%BA%8C%EF%BC%89.md)
