@@ -31,3 +31,4 @@ Android相关技术文章
 2.  [Kotlin 快速创建您的第一个应用（二）](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/kotlin/Kotlin%20%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E6%82%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8%EF%BC%88%E4%BA%8C%EF%BC%89.md)
 3.  [Kotlin 基本数据类型（三）](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/kotlin/Kotlin%20%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88%E4%B8%89%EF%BC%89.md)
 4.  [Kotlin 基础语法（四）](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/kotlin/Kotlin%20%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%EF%BC%88%E5%9B%9B%EF%BC%89.md)
+5.  [Kotlin 循环和条件控制（五）](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/kotlin/Kotlin%20%E5%BE%AA%E7%8E%AF%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%8E%A7%E5%88%B6%EF%BC%88%E4%BA%94%EF%BC%89.md)
