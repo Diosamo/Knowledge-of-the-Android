@@ -1,6 +1,6 @@
 ## Kotlin 快速创建您的第一个应用（二）
 
-上一次对Kotlin进行的大致的介绍[kotlin 新的征程(一)](https://github.com/Diosamo/Knowledge-of-the-Android/blob/master/Kotlin%E6%96%B0%E7%9A%84%E5%BE%81%E7%A8%8B.md)   
+上一次对Kotlin进行的大致的介绍[kotlin 新的征程(一)](https://www.jianshu.com/p/c7a8cadcbd8b)   
 
 那么今天呢,我们要干什么?
 ![](http://upload-images.jianshu.io/upload_images/9352581-b8c09487368a2ee1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

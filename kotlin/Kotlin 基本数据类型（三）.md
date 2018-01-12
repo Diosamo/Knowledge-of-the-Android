@@ -145,4 +145,4 @@ Kotlin 支持三个引号 """ 扩起来的字符串，支持多行字符串，�
 ![我从小就爱学习](http://upload-images.jianshu.io/upload_images/9352581-e904c3e967332a92.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 写在后面：
- 今天我们学习完了Kotlin 的基本数据类型，下一篇我们讲Kotlin的语法，今天是2018第一天，元气慢慢祝大家今年登上高峰！Goodbye！
+ 今天我们学习完了Kotlin 的基本数据类型，下一篇我们讲Kotlin的语法，今天是2018第一天，元气满满祝大家今年登上高峰！Goodbye！
