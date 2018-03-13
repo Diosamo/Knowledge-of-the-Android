@@ -1,4 +1,5 @@
 # 快速学会使用Git
+![](http://upload-images.jianshu.io/upload_images/9352581-d89401f0cce89a92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### git是什么?
 
@@ -67,10 +68,15 @@ git config --global http.sslVerify false
 
 
 ### 创建合并分支:
+    查看本地分支：git branch
 
-	查看分支：git branch
-	
-	创建分支：git branch <name>
+    查看远程分支:  git branch -r
+
+    查看所有分支:  git branch -a
+
+    创建分支：git branch <name>
+
+    创建远程仓库分支：git push origin <本地分支名> : <远程分支名>   
 	
 	切换分支：git checkout <name>
 	
@@ -79,6 +85,8 @@ git config --global http.sslVerify false
 	合并某分支到当前分支：git merge <name>
 	
 	删除分支：git branch -d <name>
+
+    删除远程分支：git push origin --delete <name>
 
 	用git log --graph命令可以看到分支合并图
 
